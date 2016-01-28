@@ -1,27 +1,27 @@
-test('Calling `timePassed` on a new `Stopwatch` should return `0`.', function( assert ) {
+test('startTime on the new Stopwatch should return `0`.', function( assert ) {
   var watch = new Stopwatch();
   var expectedTime = 0;
-  var actualTime = watch.timePassed();
+  var actualTime = watch.test1();
 
   assert.equal(actualTime, expectedTime);
 });
 
-test('Calling `timePassed` after the timer has been running for 2000ms should return `2000`.', function( assert ) {
+test('Timer should start once `watch.start` is called, run for 2000ms and then stop when `watch.stop` is called.', function( assert ) {
   var done = assert.async();
   var expectedTime = 2000;
-
   var watch = new Stopwatch();
+
   watch.start();
-
+  watch.stop();
   setTimeout(function() {
-
-    watch.stop();
-    var actualTime = Math.round(watch.timePassed()/100)*100;
+    var actualTime = Math.round(watch.test2()/100)*100;
     assert.equal(actualTime, expectedTime);
     done();
 
   }, expectedTime);
 });
+
+
 // test("timeElapsed should be Zero before we start the Timer", function() {
 //   equal(zero(), 0, 'Message: timer is zero at start' );
 // });
