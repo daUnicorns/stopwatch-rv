@@ -1,7 +1,7 @@
 test('Calling `timePassed` on a new `Stopwatch` should return `0`.', function( assert ) {
   var watch = new Stopwatch();
   var expectedTime = 0;
-  var actualTime = watch.timePassed();
+  var actualTime = watch.test1();
 
   assert.equal(actualTime, expectedTime);
 });
@@ -16,7 +16,8 @@ test('Calling `timePassed` after the timer has been running for 2000ms should re
   setTimeout(function() {
 
     watch.stop();
-    var actualTime = Math.round(watch.timePassed()/100)*100;
+    var actualTime = Math.round(watch.test2()/100)*100;
+    console.log(actualTime, watch.test2());
     assert.equal(actualTime, expectedTime);
     done();
 
