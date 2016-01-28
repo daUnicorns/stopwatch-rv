@@ -2,9 +2,13 @@ body {
   background-color: #FFBE36;
 }
 .container {
-  background-image: url("https://i.ytimg.com/vi/qxjyRmdMJug/maxresdefault.jpg");
+  background-image: url("http://s23.postimg.org/vdq0deshn/maxresdefault2.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  height: 400px;
+}
+.ladyR img {
+  width: 12em;
 }
 h1 {
   text-align: center;
@@ -12,8 +16,4 @@ h1 {
 
 h2 {
   text-align: center;
-}
-
-.bouh {
-  margin-top: 20%;
 }
