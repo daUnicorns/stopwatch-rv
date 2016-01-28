@@ -1,12 +1,12 @@
-test('Calling `getTime` on a new `Stopwatch` should return `0`.', function( assert ) {
+test('Calling `timePassed` on a new `Stopwatch` should return `0`.', function( assert ) {
   var watch = new Stopwatch();
   var expectedTime = 0;
-  var actualTime = watch.getTime();
+  var actualTime = watch.timePassed();
 
   assert.equal(actualTime, expectedTime);
 });
 
-test('Calling `getTime` after the timer has been running for 2000ms should return `2000`.', function( assert ) {
+test('Calling `timePassed` after the timer has been running for 2000ms should return `2000`.', function( assert ) {
   var done = assert.async();
   var expectedTime = 2000;
 
@@ -16,7 +16,7 @@ test('Calling `getTime` after the timer has been running for 2000ms should retur
   setTimeout(function() {
 
     watch.stop();
-    var actualTime = Math.round(watch.getTime()/100)*100;
+    var actualTime = Math.round(watch.timePassed()/100)*100;
     assert.equal(actualTime, expectedTime);
     done();
 
