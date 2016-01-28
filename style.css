@@ -1,19 +1,52 @@
 body {
   background-color: #FFBE36;
+  font-family: "Walter Turncoat", monospace;;
 }
 .container {
   background-image: url("http://s23.postimg.org/vdq0deshn/maxresdefault2.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 600px;
+  margin-top: 60px
 }
-.ladyR img {
-  width: 12em;
-}
-h1 {
+
+h1, h2 {
   text-align: center;
 }
 
-h2 {
+span {
+  width: 40px;
   text-align: center;
+  margin-left: auto;
+  display: inline-block;
+  margin-right: auto;
+  padding-left: 10px;
+}
+span:first-child {
+  padding-left: 0;
+}
+#clock {
+      margin-top: 34%;
+}
+.bouh {
+  margin-top: 30px;
+}
+.btn {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+.btn button {
+  background-color: black;
+  border: none;
+  color: #FFBE36;
+  text-transform: uppercase;
+  width: 90px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  margin: 0 3px;
 }
